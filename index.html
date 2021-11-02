@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="contact-form">
+      <input
+        class="contact-form-input"
+        name="user-name"
+        type="text"
+        placeholder="your name *"
+        required
+      />
+
+      <input
+        class="contact-form-input"
+        name="user-email"
+        type="email"
+        placeholder="your email *"
+        required
+      />
+
+      <!-- pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+        title="099-096-22-22"
+         -->
+      <input
+        class="contact-form-input"
+        name="user-tel"
+        type="tel"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+        title="099-096-22-22"
+        placeholder="your tel *"
+        required
+      />
+      <div class="contact-form-group" role="group" aria-labelledby="age">
+        <p id="age">Your age</p>
+        <input name="age" id="age-10" class="contact-form-radio" type="radio" />
+        <label for="age-10">10</label>
+        <input name="age" id="age-20" class="contact-form-radio" type="radio" />
+        <label for="age-20">20</label>
+        <input name="age" id="age-30" class="contact-form-radio" type="radio" />
+        <label for="age-30">30</label>
+      </div>
+
+      <!-- Круть -->
+      <fieldset class="contact-form-group">
+        <legend>Your hobby</legend>
+        <label>
+          <input class="contact-form-radio" type="checkbox" />
+          footbool
+        </label>
+
+        <label>
+          <input class="contact-form-radio" type="checkbox" />
+          fish
+        </label>
+
+        <label>
+          <input class="contact-form-radio" type="checkbox" />
+          run
+        </label>
+      </fieldset>
+
+      <button class="contact-form-button" type="submit">Submit</button>
+    </form>
+
+    <form name="signup_form" autocomplete="on" novalidate>
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="password" />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <form>
+      <label>
+        Username
+        <input type="text" name="username" autofocus />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" placeholder="sanches@gmail" />
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="password" minlength="5" maxlength="10" />
+      </label>
+
+      <button type="submit">Submit</button>
+
+      <form action="">
+        <p>СКОЛЬКО ЛЕТ</p>
+        <label>
+          <input type="radio" name="age" value="10-20" checked />
+          10-20
+        </label>
+
+        <label>
+          <input type="radio" name="age" value="20-30" />
+          20-30
+        </label>
+
+        <label>
+          <input type="radio" name="age" value="30-40" />
+          30-40
+        </label>
+      </form>
+    </form>
+
+    <form action="">
+      <p>Whot are you likes?</p>
+      <label> <input type="checkbox" name="likes" value="music" />music </label>
+
+      <label for=""> <input type="checkbox" name="likes" value="books" />books </label>
+
+      <label for=""> <input type="checkbox" name="likes" value="smartphone" />smartphone</label>
+    </form>
+
+    <form action="">
+      <label for="">
+        <input type="tel" name="phone_number" value="+380" />
+      </label>
+    </form>
+    <button type="submit">Submit</button>
+
+    <label>
+      Ползунок:
+      <input
+        class="range"
+        type="range"
+        name="interest_rate"
+        value="30"
+        min="0"
+        max="100"
+        step="2"
+      />
+    </label>
+
+    <form action="">
+      <label for="">
+        <input
+          type="datetime-local"
+          min="1960-01-01T00:00"
+          max="2022-01-01T00:00"
+          name="data-time"
+        />
+      </label>
+    </form>
+    <!-- TEXTAREA -->
+    <div class="textarea">
+      <form action="">
+        <label for="">
+          Email
+          <input type="email" name="email" placeholder="sancehs@gmail" />
+        </label>
+
+        <label for="">
+          Feedback
+          <textarea name="feedback" rows="10" placeholder="Type your message here..."></textarea>
+        </label>
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+
+    <!-- SELECT выпадающее меню -->
+
+    <div class="select">
+      <form action="">
+        <label for="size">Size</label>
+        <select name="size" id="size">
+          <option value="es">Extra small</option>
+          <option value="s" selected>Small</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+        </select>
+      </form>
+    </div>
+
+    <!-- DATALIST -->
+
+    <div class="datalist">
+      <label for="love">Choose your favorite word, for you wife</label>
+
+      <input list="word" type="text" name="favorite" id="fav" />
+
+      <datalist id="word">
+        <option value="Love">L</option>
+        <option value="Fire">F</option>
+        <option value="Sexy" selected>S</option>
+        <option value="beautiful">B</option>
+      </datalist>
+    </div>
+
+    <!-- FIELDSET групировка полей -->
+    <div class="fieldset">
+      <form class="form">
+        <div class="form-group" aria-labelledby="contact-detalis-head">
+          <p id="contact-detalis-head">Enter your contact details</p>
+
+          <label for="">
+            Name
+            <input type="text" name="username" />
+          </label>
+
+          <label for="">
+            Email
+            <input type="email" name="email" />
+          </label>
+        </div>
+
+        <div class="form-group" aria-labelledby="language-head">
+          <p id="language-head">Your favorite prodramming language</p>
+          <label for="">
+            <input type="checkbox" name="language" value="python" />
+            Python
+          </label>
+
+          <label for="">
+            <input type="checkbox" name="language" value="js" />
+            JS
+          </label>
+          <label>
+            <input type="checkbox" name="language" value="ruby" />
+            Ruby
+          </label>
+        </div>
+      </form>
+
+      <!-- <div class="form-group" role="group" aria-labelledby="newsletter-head">
+          <p id="newsletter-head">I want to receive</p>
+          <label>
+            <input type="checkbox" name="newsletter" value="weekly" />
+            The weekly newsletter
+          </label>
+          <label>
+            <input type="checkbox" name="newsletter" value="company_offers" />
+            Offers from the company
+          </label>
+          <label>
+            <input type="checkbox" name="newsletter" value="associated_offers" />
+            Offers from associated companies
+          </label>
+        </div>
+
+        <button type="submit">Subscribe</button>
+      </form> -->
+    </div>
+  </body>
+</html>
