@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <title>form</title>
+</head>
+<body>
+
+  <a href="./01-crossbrowser.html">crossbrowser</a>
+
+    <form class="js-speaker-form">
+        <label for="name">Имя</label>
+        <input type="text" name="name" id="name"/>
+
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel">
+
+        <label for="mail">Почта</label>
+        <input type="email" name="mail" id="mail">
+
+
+        <div role="group">
+          <input type="checkbox" name="topic" value="html" id="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="topic" value="js" id="js" checked>
+        <label for="js">JS</label>
+
+        <input type="checkbox" name="topic" value="css" id="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="topic" value="phiton" id="phiton">
+        <label for="phiton">Phiton</label>
+        </div>
+
+        <div role="group" class="group-it">
+          <input type="radio" name="it" value="junior" id="junior">
+        <label for="junior">Junior</label>
+
+        <input type="radio" name="it" value="middle" id="middle" checked>
+        <label for="middle">Middle</label>
+
+        <input type="radio" name="it" value="senior" id="senior">
+        <label for="senior">Senior</label>
+        </div>
+
+        <label for="load">Загрузка файла pdf</label>
+        <input type="file" name="pdf" id="load">
+
+        <label for="comment"></label>
+        <textarea name="comment" id="comment" name="comment" rows="8" placeholder="Коменты" ></textarea>
+
+<label for="policy">Соглашаюсь на всё, за еду</label>
+<input type="checkbox" name="policy" id="policy">
+        <button type="submit">Форма заявки</button>
+    </form>
+
+    
+
+
+    <script>
+        (() => {
+  document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    new FormData(e.currentTarget).forEach((value, name) =>
+      console.log(`${name}: ${value}`),
+    );
+  });
+})();
+    </script>
+</body>
+</html>

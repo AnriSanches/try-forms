@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/01-crossbrowser.css">
+    <title>crossbrowser</title>
+</head>
+<body>
+
+    <a href="./index.html">Index</a>
+    
+
+    <form class="form" autocomplete="off">
+        <div class="form-field">
+
+            <!-- <label for="name" class="form-label">Имя</label>  что бы поменять label и сделать на него фокус, должен стоять после input-->
+            <input type="text" class="form-input" name="name" id="name" placeholder=" "> 
+            <!-- что бы сработал пустой плейс холдер нужно поставить пробел -->
+            <label for="name" class="form-label">Имя</label>
+            <span class="icon"></span>
+        </div>
+
+        <div class="form-field">
+            
+            <input type="email" class="form-input" name="mail" id="mail" placeholder="ivan@mail.ru">
+            <label for="mail" class="form-label">Почта</label>
+            <span class="icon"></span>
+        
+            <button type="submit">Оставить заявку</button>
+        </div>
+    </form>
+</body>
+</html>
