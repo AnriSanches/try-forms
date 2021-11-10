@@ -23,37 +23,30 @@ body{
 
 .check__box{
     position: absolute;
-    margin-left: -1.2em;
-    width: 1em;
-    height: 1em;
-    background-image: url(../images/off.svg);
-
+    margin-top: 0.2em;
+    margin-left: -1em;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 0.05em;
+    background-color: white;
+    box-shadow: 0 0 0 0.1em #4A90E2;
 }
-
-/* Checked */ 
 
 .check__input:checked + .check__box{
-    background-image: url(../images/on.svg);
+    background-color: violet;
+    background-image: url(../images/check.svg);
 }
-
-/* focused */
 
 .check__input:focus + .check__box{
-    background-image: url(../images/off-focused.svg);
+    box-shadow: 0 0 0 0.1em #4A90E2;
+    box-shadow: 0 0 0 0.2em green;
 }
-
-.check__input:checked:focus + .check__box{
-    background-image: url(../images/on-focused.svg);
-}
-
-/* disables */
-
 
 .check__input:disabled + .check__box{
-    background-image: url(../images/off-disabled.svg);
+    box-shadow: 0 0 0 0.1em #9B9B9B;
 }
 
 .check__input:checked:disabled + .check__box{
-    background-image: url(../images/on-disabled.svg);
+    background-color: grey;
 }
 
