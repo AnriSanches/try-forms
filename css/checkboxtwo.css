@@ -4,7 +4,30 @@ body{
     font-family: sans-serif;
 }
 
-.option{
+.visually-hidden  {
+    position:  absolute;
+    width: 1px;
+    height:  1px;
+    margin:  -1px;
+    padding:  0;
+    border:  0;
+ 
+    white-space:  nowrap;
+    clip-path:  inset(100%);
+    clip:  rect(0 0 0 0);
+    overflow:  hidden;
+ }
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container:nth-child(1){
+
+
+}
+/* .option{
     display: block;
     margin-bottom: 0.25em;
 }
@@ -49,4 +72,82 @@ body{
 .check__input:checked:disabled + .check__box{
     background-color: grey;
 }
+ */
+
+ .option{
+     display: flex;
+     margin-bottom: 20px;
+ }
+
+ .check{
+     padding-left: 30px;
+ }
+
+ .check__input{     
+     position: absolute;
+ }
+
+ .check__box{
+margin-top: 3px;
+margin-left: -20px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: grey;
+    border: 1px solid green;
+    border-radius: 3px;
+    background-image: url(../images/check.svg);
+ }
+
+ .check__input:checked + .check__box{
+     background-color: green;
+ }
+
+ .check__input:focus + .check__box{
+     border: 3px solid red;
+ }
+
+
+ /*===REPETA=== */
+ ul{
+     list-style: none;
+     margin: 0;
+     padding: 0;
+ }
+
+ li{
+     /* position: relative; */
+     
+ }
+
+ .rcheckbox{
+     appearance: none;
+     
+ }
+
+
+.rchackbox-label {
+    display: flex;
+    display:inline-block;
+    outline: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+.rcheckbox-icon {
+    display: inline-block;
+    /* position: absolute; */
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.rcheckbox:checked + .rcheckbox-icon{
+    background-color: teal;
+    border-radius: 50%;
+    border: transparent;
+}
+
 
